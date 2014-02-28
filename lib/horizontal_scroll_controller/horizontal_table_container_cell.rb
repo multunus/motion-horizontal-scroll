@@ -20,7 +20,7 @@ class HorizontalTableContainerCell < UITableViewCell
   end
   
   def tableView(table_view, didSelectRowAtIndexPath: index_path)
-    self.delegate.horizontal_scroll_cell_selected(index_path.row) if self.delegate
+    self.delegate.horizontal_scroll_cell_selected(self.items_list[index_path.row], index_path.row) if self.delegate
   end
 
   def set_dimensions_with_row_offset
