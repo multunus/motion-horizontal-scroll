@@ -5,7 +5,7 @@ class BasicTableViewCell < UITableViewCell
 
   def initWithFrame(frame)
     if super
-      self.thumbnail = UIView.alloc.initWithFrame(CGRectMake(15, 23, 115, 145))
+      self.thumbnail = UIImageView.alloc.initWithFrame(CGRectMake(15, 23, 115, 145))
       self.thumbnail.userInteractionEnabled = true
       self.thumbnail.opaque = true
       self.contentView.addSubview(thumbnail)
