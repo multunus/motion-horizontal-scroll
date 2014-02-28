@@ -23,7 +23,7 @@ class HorizontalTableContainerCell < UITableViewCell
 
   end
 
-  def setDimensionsWithRowOffset()
+  def set_dimensions_with_row_offset()
     @scroll_view = setup_background_scroll_view
     self.backgroundColor = UIColor.clearColor
     self.horizontal_table_view = setup_horizontal_tableview
