@@ -23,7 +23,7 @@ class BasicTableViewCell < UITableViewCell
   end
 
   def set_thumbnail_image image
-    self.thumbnail.image = UIImage.imageNamed(image)
+    self.thumbnail.setImage image
   end
 
   def set_thumbnail_image_with_url image_url, placeholder

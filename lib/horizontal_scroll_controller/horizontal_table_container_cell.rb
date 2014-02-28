@@ -1,7 +1,7 @@
 class HorizontalTableContainerCell < UITableViewCell
   include ControlVariables
   
-  attr_accessor :horizontal_table_view, :items_list
+  attr_accessor :horizontal_table_view, :items_list, :delegate, :vertical_row_offset
 
   def tableView(table_view, numberOfRowsInSection: section)
     items_count = items_list.count
@@ -10,7 +10,7 @@ class HorizontalTableContainerCell < UITableViewCell
   def tableView(table_view, cellForRowAtIndexPath: index_path)
     cell = get_reusable_cell table_view
     current_item = self.items_list[index_path.row]
-    set_item_details_for_cell cell, current_item
+    self.delegate.set_item_details_for_horizontal_scoll_cell cell, current_item
     cell.selectionStyle = UITableViewCellSelectionStyleNone
     cell
   end
@@ -20,7 +20,7 @@ class HorizontalTableContainerCell < UITableViewCell
   end
   
   def tableView(table_view, didSelectRowAtIndexPath: index_path)
-
+    self.delegate.horizontal_scroll_cell_selected(index_path.row) if self.delegate
   end
 
   def set_dimensions_with_row_offset
@@ -82,15 +82,6 @@ class HorizontalTableContainerCell < UITableViewCell
       cell = BasicTableViewCellWithTitle.alloc.initWithFrame(CGRectMake(0, 0, CELL_WIDTH, CELL_HEIGHT + vertical_row_offset))
     end
     cell
-  end
-
-  def set_item_details_for_cell cell, item
-    cell.set_title_label_text item.name
-    cell.set_thumbnail_image_with_url item.image, ""
-  end
-  
-  def vertical_row_offset
-    0
   end
   
 end
