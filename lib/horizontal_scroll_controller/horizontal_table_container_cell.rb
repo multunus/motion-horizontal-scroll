@@ -72,7 +72,7 @@ class HorizontalTableContainerCell < UITableViewCell
     [get_origin_before_transformation, [CELL_HEIGHT + vertical_row_offset, Device.screen.width]]
   end
 
-  def reloadContent
+  def reload_content
     self.horizontal_table_view.reloadData
   end
 
