@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jerryjohnjacob/horizontal_scroll_controller
-  revision: 9b35791ed4b48173060cb6a4fec7cc50056c3b34
+  revision: d77eeccac3b539f190b93fd3810938729d5826ad
   specs:
     horizontal_scroll_controller (1.0)
 

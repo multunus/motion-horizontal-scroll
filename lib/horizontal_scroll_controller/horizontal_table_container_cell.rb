@@ -4,7 +4,7 @@ class HorizontalTableContainerCell < UITableViewCell
   attr_accessor :horizontal_table_view, :items_list, :delegate, :vertical_row_offset
 
   def tableView(table_view, numberOfRowsInSection: section)
-    items_count = items_list.count
+    self.items_list.count
   end
   
   def tableView(table_view, cellForRowAtIndexPath: index_path)
@@ -56,10 +56,6 @@ class HorizontalTableContainerCell < UITableViewCell
     horizontal_table_view
   end
 
-  def get_cell_frame
-    [[0, 0], [CELL_WIDTH, CELL_HEIGHT + vertical_row_offset]]
-  end
-  
   def get_origin_before_transformation
     [60 - vertical_row_offset, -60 + vertical_row_offset]
   end
