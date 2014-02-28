@@ -86,6 +86,7 @@ class HorizontalTableContainerCell < UITableViewCell
 
   def set_item_details_for_cell cell, item
     cell.set_title_label_text item.name
+    cell.set_thumbnail_image_with_url item.image, ""
   end
   
   def vertical_row_offset
