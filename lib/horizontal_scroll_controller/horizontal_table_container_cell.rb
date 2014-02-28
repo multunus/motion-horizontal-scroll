@@ -23,7 +23,7 @@ class HorizontalTableContainerCell < UITableViewCell
 
   end
 
-  def set_dimensions_with_row_offset()
+  def set_dimensions_with_row_offset
     @scroll_view = setup_background_scroll_view
     self.backgroundColor = UIColor.clearColor
     self.horizontal_table_view = setup_horizontal_tableview
@@ -33,7 +33,7 @@ class HorizontalTableContainerCell < UITableViewCell
 
   def setup_background_scroll_view
     scroll_view = UIScrollView.alloc.initWithFrame(get_wrapping_scroll_view_frame)
-    scroll_view.contentSize = CGSizeMake(Device.screen.width, CELL_HEIGHT + get_row_offset)
+    scroll_view.contentSize = CGSizeMake(Device.screen.width, CELL_HEIGHT + vertical_row_offset)
     scroll_view.bounces = true
     scroll_view.alwaysBounceHorizontal = true
     scroll_view.backgroundColor = UIColor.clearColor
@@ -57,19 +57,19 @@ class HorizontalTableContainerCell < UITableViewCell
   end
 
   def get_cell_frame
-    [[0, 0], [CELL_WIDTH, CELL_HEIGHT + get_row_offset]]
+    [[0, 0], [CELL_WIDTH, CELL_HEIGHT + vertical_row_offset]]
   end
   
   def get_origin_before_transformation
-    [60 - get_row_offset, -60 + get_row_offset]
+    [60 - vertical_row_offset, -60 + vertical_row_offset]
   end
   
   def get_wrapping_scroll_view_frame
-    [[0,0],[Device.screen.width, CELL_HEIGHT + get_row_offset]]
+    [[0,0],[Device.screen.width, CELL_HEIGHT + vertical_row_offset]]
   end
 
   def get_horizontal_table_view_frame
-    [get_origin_before_transformation, [CELL_HEIGHT + get_row_offset, Device.screen.width]]
+    [get_origin_before_transformation, [CELL_HEIGHT + vertical_row_offset, Device.screen.width]]
   end
 
   def reloadContent
@@ -79,7 +79,7 @@ class HorizontalTableContainerCell < UITableViewCell
   def get_reusable_cell table_view
     cell = table_view.dequeueReusableCellWithIdentifier(BasicTableViewCellWithTitle.name)
     if cell.nil?
-      cell = BasicTableViewCellWithTitle.alloc.initWithFrame(CGRectMake(0, 0, CELL_WIDTH, CELL_HEIGHT + get_row_offset))
+      cell = BasicTableViewCellWithTitle.alloc.initWithFrame(CGRectMake(0, 0, CELL_WIDTH, CELL_HEIGHT + vertical_row_offset))
     end
     cell
   end
@@ -88,7 +88,7 @@ class HorizontalTableContainerCell < UITableViewCell
     cell.set_title_label_text item.name
   end
   
-  def get_row_offset
+  def vertical_row_offset
     0
   end
   
