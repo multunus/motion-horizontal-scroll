@@ -1,7 +1,7 @@
 class BasicTableViewCell < UITableViewCell
   include ControlVariables
 
-  attr_accessor :thumbnail, :model
+  attr_accessor :thumbnail
 
   def initWithFrame(frame)
     if super

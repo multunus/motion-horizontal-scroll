@@ -9,7 +9,7 @@ class HorizontalTableContainerCell < UITableViewCell
   
   def tableView(table_view, cellForRowAtIndexPath: index_path)
     cell = get_reusable_cell table_view
-    current_item = items_list[index_path.row]
+    current_item = self.items_list[index_path.row]
     set_item_details_for_cell cell, current_item
     cell.selectionStyle = UITableViewCellSelectionStyleNone
     cell
