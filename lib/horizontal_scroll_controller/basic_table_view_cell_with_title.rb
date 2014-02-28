@@ -9,7 +9,7 @@ class BasicTableViewCellWithTitle < BasicTableViewCell
     label_frame = CGRectMake(15, CELL_HEIGHT - 55, 85, 50)
     self.title_label = UILabel.alloc.initWithFrame(label_frame)
     self.title_label.text = ""
-    self.title_label.font = UIFont boldSystemFontOfSize(12)
+    self.title_label.font = UIFont.boldSystemFontOfSize(12)
     self.title_label.numberOfLines = 2
     self.title_label.backgroundColor = UIColor.clearColor
     self.title_label.baselineAdjustment = UIBaselineAdjustmentAlignBaselines
