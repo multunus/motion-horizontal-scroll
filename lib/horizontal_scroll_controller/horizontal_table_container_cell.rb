@@ -10,7 +10,7 @@ class HorizontalTableContainerCell < UITableViewCell
   def tableView(table_view, cellForRowAtIndexPath: index_path)
     cell = get_reusable_cell table_view
     current_item = self.items_list[index_path.row]
-    self.delegate.set_item_details_for_horizontal_scoll_cell cell, current_item
+    self.delegate.set_item_details_for_horizontal_scroll_cell cell, current_item
     cell.selectionStyle = UITableViewCellSelectionStyleNone
     cell
   end

@@ -43,7 +43,7 @@ class ScreenController < UIViewController
     App.alert "#{item.name} at index #{index}"
   end
 
-  def set_item_details_for_horizontal_scoll_cell cell, item
+  def set_item_details_for_horizontal_scroll_cell cell, item
     cell.set_title_label_text item.name
     cell.set_thumbnail_image_with_url item.image_url, "img.jpeg"
   end
