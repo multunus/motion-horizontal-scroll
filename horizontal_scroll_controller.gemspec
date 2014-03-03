@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |gem|
-  gem.authors       = ["Jerry"]
-  gem.email         = ["jerry.john.jacob@live.com"]
-  gem.description   = "This iOS controller provides a means of horizontally scrolling through items as opposed to the standard vertical scroll"
-  gem.summary       = "Horizontal tableview controller for iOS"
-  gem.homepage      = "https://github.com/jerryjohnjacob/horizontal_scroll_controller"
+  gem.authors       = ["Multunus"]
+  gem.email         = ["info@multunus.com"]
+  gem.description   = "This iOS (RubyMotion) controller provides a means of horizontally scrolling through items as opposed to the standard vertical scroll"
+  gem.summary       = "Horizontal tableview controller for iOS (RubyMotion)"
+  gem.homepage      = "https://github.com/multunus/horizontal_scroll_controller"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
