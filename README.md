@@ -1,7 +1,11 @@
 iOS Horizontal Scroll Controller
 ============================
 
-This is a horizontal scroll controller for iOS. It is quite similar to the one used in the App Store.
+This is a horizontal scroll controller for iOS that mimics the Pulse UI. It is quite similar to the one used in the App Store.
+
+![Screenshot 1 of Sample Implementation](https://dl.dropboxusercontent.com/s/p3ecjgjlk7mrc7d/horizontal_scroll_1.png)
+
+![Screenshot 2 of Sample Implementation](https://dl.dropboxusercontent.com/s/pb2qqp8vgopkfvn/horizontal_scroll_2.png)
 
 ### Add to Gemfile
 
@@ -58,6 +62,6 @@ The first method involves directly providing an instance of UIImage:
 cell.set_thumbnail_image image      # image is an instance of UIImage
 ```
 
-And the second is probably the method that would be more commonly used for apps that use images pulled from a network. This would require the *afmotion* gem or the *UIImageView+AFNetworking* category. The two arguments it takes are the URL to the image and the name of a locally available placeholder image. The syntax is:
+And the second is probably the method that would be more commonly used for apps that use images pulled from a network. This would require the ```setImageWithURL``` method for the ```UIImageView``` class which can be availed by installing the ```afmotion``` gem (in Objective-C, this would be available in the ```UIImageView+AFNetworking``` category). The two arguments it takes are the URL to the image and the name of a locally available placeholder image. The syntax is:
 ```ruby
 cell.set_thumbnail_image_with_url image_url, placeholder      # image_url is a URL in form of a string and the placeholder is a local image that can take the place of the image until it loads
