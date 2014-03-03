@@ -3,7 +3,7 @@ unless defined?(Motion::Project::Config)
 end
 
 Motion::Project::App.setup do |app|
-  Dir.glob(File.join(File.dirname(__FILE__), "horizontal_scroll_controller/*.rb")).each do |file|
+  Dir.glob(File.join(File.dirname(__FILE__), "motion-horizontal-scroll/*.rb")).each do |file|
     app.files.unshift(file)
   end
 end
