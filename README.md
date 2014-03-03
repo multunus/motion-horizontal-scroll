@@ -1,7 +1,7 @@
 iOS Horizontal Scroll Controller
 ============================
 
-This is a horizontal scroll controller for iOS that mimics the Pulse UI. It is quite similar to the one used in the App Store. The basic functionality is borrowed from a [codebase](https://github.com/Bodacious/HorizontalScrollingTablesInRubyMotion) that tries to achieve the same.
+This is a horizontal scroll controller for iOS that mimics the Pulse UI. It is quite similar to the one used in the App Store. The basic functionality is borrowed from a [codebase](https://github.com/Bodacious/HorizontalScrollingTablesInRubyMotion) and it is the reason why we were able to come up with this gem, so hats off to the authors! Also, a ton of thanks to [lorempixel](http://lorempixel.com/) from where we have pulled in images to feed the sample app.
 
 ![Screenshot 1 of Sample Implementation](https://dl.dropboxusercontent.com/s/p3ecjgjlk7mrc7d/horizontal_scroll_1.png)
 
