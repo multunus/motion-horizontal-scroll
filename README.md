@@ -1,6 +1,8 @@
 iOS (RubyMotion) Horizontal Scroll Controller
 ============================
 
+[![Code Climate](https://codeclimate.com/github/multunus/motion-horizontal-scroll.png)](https://codeclimate.com/github/multunus/motion-horizontal-scroll)
+
 This is a horizontal scroll controller for iOS, that mimics the Pulse UI. The basic functionality is borrowed from a [codebase](https://github.com/Bodacious/HorizontalScrollingTablesInRubyMotion) and it is the reason why we were able to come up with this gem, so hats off to the authors! Also, a ton of thanks to [lorempixel](http://lorempixel.com/) from where we have pulled in images to feed the sample app.
 
 ![Animated GIF of Sample Implementation](http://dl.dropboxusercontent.com/s/ja22eokvwmji46j/horizontal_scroll_sample_app.gif)
